@@ -5,18 +5,21 @@ import Swal from "sweetalert2";
 export default class ImageModel {
   Id: string;
 	Name: string;
-	Bytes: string;
+	Content: Blob;
+  Blob_url: string;
 	Description: string;
 	Visible: boolean;
 	Tags: string[];
 	Date: string;
 
   constructor(
-    bytes: string, name?: string,
+    content: Blob, url: string, name?: string,
     description?: string, visible = false,
-    tags: string[] = []) {
+    tags: string[] = []
+  ) {
       this.Id = GetRandomCode();
-      this.Bytes = bytes;
+      this.Content = content;
+      this.Blob_url = url;
       this.Name = name || '';
       this.Description = description || '';
       this.Visible = visible;
