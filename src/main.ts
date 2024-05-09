@@ -4,9 +4,9 @@ import App from './App.vue';
 import router from './router';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faUpload } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faChevronLeft, faChevronRight);
+library.add(faChevronLeft, faChevronRight, faUpload);
 
 const pinia = createPinia();
 const app = createApp(App)
